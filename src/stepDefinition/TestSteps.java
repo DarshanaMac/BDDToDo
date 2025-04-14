@@ -32,21 +32,6 @@ public class TestSteps {
 	public static WebDriver driver;
 	List<String> visibleTodos;
 	
-	
-	@Given("^User is on Home Page$")
-	public void user_is_on_Home_Page() throws Throwable {
-
-		/*
-		 * Initiate chrome
-		 * 
-		 * CHROME BROWSER
-		 */
-
-		WebDriverManager.chromedriver().setup(); // Automatically downloads ChromeDriver v135
-		driver = new ChromeDriver();
-		driver.get("https://buggy.justtestit.org/");
-		driver.manage().window().maximize();
-	}
 
 	@Given("I am on the TodoMVC React page")
 	public void openTodoPage() {
@@ -76,10 +61,6 @@ public class TestSteps {
 		assertTrue(found);
 	}
 
-	public void pause() {
-		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
-	}
-
 	@Given("I have added a todo {string}")
 	public void addTodo(String todoText) {
 		openTodoPage();
@@ -93,21 +74,6 @@ public class TestSteps {
 		checkbox.click();
 	}
 
-	private WebElement getCheckboxForTodo(String todoText) {
-		WebElement item = getTodoItem(todoText);
-		return item.findElement(By.className("toggle"));
-	}
-
-	// Utility methods
-	private WebElement getTodoItem(String todoText) {
-		List<WebElement> items = driver.findElements(By.cssSelector(".todo-list li"));
-		for (WebElement item : items) {
-			WebElement label = item.findElement(By.tagName("label"));
-			if (label.getText().equals(todoText))
-				return item;
-		}
-		throw new NoSuchElementException("Todo not found: " + todoText);
-	}
 
 	@Then("{string} should appear as completed")
 	public void verifyCompleted(String todoText) {
@@ -155,14 +121,8 @@ public class TestSteps {
     public void i_have_todos_marked_as_active(String task1, String task2) {
 		addTodoTwoItems(task1);
 		addTodoTwoItems(task2);
-        // Active by default — no checkbox click needed
     }
 	
-//	@And("I have a completed todo {string}")
-//    public void i_have_a_completed_todo(String task) {
-//        addTodo(task);
-//        markTodoCompleted(task);
-//    }
 
     @When("I click on the {string} filter")
     public void i_click_on_the_filter(String filter) {
@@ -189,6 +149,25 @@ public class TestSteps {
     }
 
     // ----------- Helper Methods -----------
+    
+    private WebElement getCheckboxForTodo(String todoText) {
+		WebElement item = getTodoItem(todoText);
+		return item.findElement(By.className("toggle"));
+	}
+    
+    private WebElement getTodoItem(String todoText) {
+		List<WebElement> items = driver.findElements(By.cssSelector(".todo-list li"));
+		for (WebElement item : items) {
+			WebElement label = item.findElement(By.tagName("label"));
+			if (label.getText().equals(todoText))
+				return item;
+		}
+		throw new NoSuchElementException("Todo not found: " + todoText);
+	}
+    
+    public void pause() {
+		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+	}
 
     private void addTodoTwoItems(String task) {
         WebElement input = driver.findElement(By.className("new-todo"));
