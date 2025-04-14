@@ -41,6 +41,80 @@ Right click feature file and run as cucumber feature
 
 
 
+**Summary of Implementation Technique**
+
+**1. Behavior-Driven Development (BDD) with Cucumber**
+
+Implementation Technique:
+
+•	Uses .feature files written in Gherkin syntax to describe test scenarios in plain English.
+
+•	Each scenario is mapped to a step definition method in Java.
+
+•	Follows the format:
+
+Given I have todos "Task A" and "Task B" marked as active
+
+Why it’s used:
+
+•	Promotes collaboration between developers, testers, and non-technical stakeholders.
+
+•	Clear traceability from business requirements to automation.
+
+________________________________________
+**2. Test Automation with Selenium WebDriver**
+
+Implementation Technique:
+
+•	Automates UI interactions like typing into the input box, marking todos completed, filtering views, and validating UI elements.
+
+•	Uses standard Selenium locators (By.className, By.cssSelector) to interact with the DOM.
+
+Example in Java:
+
+WebElement input = driver.findElement(By.className("new-todo"));
+
+input.sendKeys("Task A");
+
+input.sendKeys(Keys.ENTER);
+
+Why it’s used:
+
+•	Enables end-to-end validation of the web UI.
+
+•	Mimics real user behavior in the browser.
+
+
+ **3. Build & Dependency Management with Maven**
+
+Implementation Technique:
+
+•	All dependencies (cucumber-java, selenium-java, testng, etc.) are declared in pom.xml.
+
+•	Ensures consistent builds and manages libraries centrally.
+
+Why it’s used:
+
+•	Streamlines dependency management.
+
+•	Enables running tests using Maven commands (mvn test).
+
+________________________________________
+**4. Project Structure**
+
+Folders:
+/Feature         → contains feature files
+
+/src             → contains step definitions
+
+/RunnerTest.java → contains the Cucumber TestNG runner
+
+
+
+
+
+
+
 
 
 
