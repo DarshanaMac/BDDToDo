@@ -9,30 +9,38 @@ Prerequisite
 
 
 **1. Get clone URL from git**
-![image](https://user-images.githubusercontent.com/14839226/209308016-0d342ce0-eb35-4c68-a491-0fddc382bd65.png)
+![image](https://github.com/user-attachments/assets/f9597afd-5255-4259-9c38-5272f508b4c3)
 
 
-2.Import to eclipse as Maven project
-![image](https://user-images.githubusercontent.com/14839226/209308172-f77a200e-a8ae-437d-9f08-40e5c126243c.png)
+**2.Import to eclipse as Maven project**
+
+![image](https://github.com/user-attachments/assets/00b3f6e5-d651-4658-8931-60079b3bcd0c)
 
 
-**3.Test Runner**
-![image](https://user-images.githubusercontent.com/14839226/209308262-dd8a8e7a-bbd0-480c-8f58-e8245cc096d2.png)
+**3.Test Runner File**
+
+![image](https://github.com/user-attachments/assets/d2c577c6-14e7-4167-8ac9-a826569b0a54)
+
+**4.Test Steps**
+
+![image](https://github.com/user-attachments/assets/6be1ef60-c4b1-4e47-9507-da2b00405101)
 
 
-**4.Feature file**
-![image](https://user-images.githubusercontent.com/14839226/209308319-67f9f007-d002-49c7-81b9-4f068581f262.png)
+**5. Feature Files**
+
+![image](https://github.com/user-attachments/assets/15cfd833-ca6b-406d-89a6-2eb60455786e)
+
+![image](https://github.com/user-attachments/assets/12a23c25-5170-46c9-8bb8-c45f3f89c97a)
 
 
-**5. API tests**
-![image](https://user-images.githubusercontent.com/14839226/209308406-38935fff-7faa-49ac-9ff7-d55bf9cb4ebc.png)
+**6. Execution**
+
+![image](https://github.com/user-attachments/assets/785e010b-72e0-4a0b-97aa-3a4b4d37a4d2)
+
+Right click feature file and run as cucumber feature
 
 
-**6. Feature execution**
-Run as cucumber
-![image](https://user-images.githubusercontent.com/14839226/209308551-a8aeab07-cb67-446f-8b8a-f22addb8dcdb.png)
 
 
-**7. API execution**
 
-Right click on BuggyCarsAPI java class and run as TestNG
+
