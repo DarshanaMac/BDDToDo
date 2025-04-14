@@ -9,7 +9,7 @@ Prerequisite
 
 
 **1. Get clone URL from git**
-![image](https://user-images.githubusercontent.com/14839226/209308016-0d342ce0-eb35-4c68-a491-0fddc382bd65.png)
+![image](https://github.com/user-attachments/assets/f9597afd-5255-4259-9c38-5272f508b4c3)
 
 
 2.Import to eclipse as Maven project
